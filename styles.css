@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Caprasimo&family=Truculenta:opsz,wght@12..72,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap);
+
 * {
     box-sizing: border-box;
     box-sizing: inherit;
@@ -5,10 +7,31 @@
     padding: 0;
 }
 
-body{
+body {
     background-image: url(https://a-static.besthdwallpaper.com/lofi-cafe-studying-art-wallpaper-3000x2000-85076_42.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+.tarjeta {
+    gap: 20px;
+}
+h4 {
+    color: #fff;
+    text-align: center;
+    height: 30px;
+}
+h6 {
+    font-family: "Truculenta", sans-serif;
+    text-align: center;
+    height: 63px;
+    width: 100%;
+}
+p {
+    text-align: center;
+    height: 30px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
