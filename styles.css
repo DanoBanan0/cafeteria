@@ -1,6 +1,14 @@
-html {
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+body{
+    background-image: url(https://images.vexels.com/media/users/3/71354/raw/e7a7f3e100d1e8ee70cc7a05501f7dfb-fondo-de-taza-de-cafe-caliente-con-frijoles.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
