@@ -105,6 +105,7 @@
 
         <!--Carrito SideBar-->
         <div id="carritoSidebar" class="side-bar">
+        <button class="btn-close float-end" aria-label="Cerrar" onclick="mostrarCarritoSidebar()"></button>
            <p>🛒Tu carrito</p>
            <table class="table table-sm table-striped">
             <thead>
@@ -117,7 +118,7 @@
             <tbody id="articulos-carrito"></tbody>
             <tfoot>
                 <tr>
-                    <td>Total:</td>
+                    <td colspan="2"><strong>Total:</strong></td>
                     <td id="carrito-total">$0.00</td>
                 </tr>
             </tfoot>
