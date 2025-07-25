@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <div class="overlay"></div>
+        <div class="header-overlay"></div>
         <nav class="navbar navbar-expand-lg px-4 pt-3">
           <div class="container-fluid">
           <a class="navbar-brand" href="#">Coffee</a>
@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <button class="btn btn-outline-primary position-fixed bottom-0 end-0 m-4" onclick="mostrarCarritoSidebar()">Ver Carrito 🛒</button>
+        <button class="btn btn-primary position-fixed bottom-0 end-0 m-4" onclick="mostrarCarritoSidebar()">Ver Carrito 🛒</button>
 
         <!--Carrito SideBar-->
         <div id="carritoSidebar" class="side-bar">
@@ -123,13 +123,20 @@
                 </tr>
             </tfoot>
            </table>
+           <div class="d-flex justify-content-center mt-3">
+                <button class="btn btn-danger w-50" onclick="finalizarCompra()">Finalizar Compra</button>
+           </div>
 
     </main>
 
     <footer>
 
     </footer>
+    <div id="mensaje-general" class="alert alert-primary text-center" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2000; width: 300px;">
 
+   </div>
+    <div id="overlay"></div>
     <script src="script.js"></script>
+    
 </body>
 </html>

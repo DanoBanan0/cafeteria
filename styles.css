@@ -51,7 +51,7 @@ header {
 }
 
 
-.overlay {
+.header-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -118,16 +118,35 @@ header {
 
 /*-------- Estilo carrito de Compras -------*/
 
-.side-bar{
-position: fixed;
-top: 0;
-right: 0;
-width: 300px;
-height: 100%;
-background-color: #fff;
-border-left: 2px solid #ccc;
-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-display:none;
-z-index: 1050;
-overflow-y:auto;
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  border-left: 2px solid #ccc;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1051; 
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); 
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5) ;
+    z-index: 1050;
+    display: none;
+}
+
+
+.side-bar.activa {
+  display: block;
+  transform: translateX(0); 
 }
