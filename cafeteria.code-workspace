@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../cafeteria"
+		},
+		{
+			"name": "cafeteria-1",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cafeteria"
+	}
+}
