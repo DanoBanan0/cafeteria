@@ -23,6 +23,7 @@ function actualizarCarrito() {
             <td>${item.nombre}</td>
             <td>${item.cantidad}</td>
             <td>${(item.precio * item.cantidad).toFixed(2)}</td>
+            <td><button class="btn btn-outline-danger btn-sm" onclick="eliminarDelCarrito('${item.nombre}')">X</button></td>
         `;
         cuerpoTabla.appendChild(fila);
         total += item.precio * item.cantidad;
@@ -41,5 +42,10 @@ function agregarAlCarrito(nombre, precio) {
         carrito.push({ nombre, precio, cantidad: 1 });
     }
 
+    actualizarCarrito();
+}
+
+function eliminarDelCarrito(nombre) {
+    carrito = carrito.filter(item => item.nombre !== nombre);
     actualizarCarrito();
 }
