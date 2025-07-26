@@ -287,9 +287,8 @@ header {
 }
 
 /*Seccion especial*/
-/* Sección especial - ahora solo actúa como contenedor */
 .special-section {
-    background: none; /* Lo elimina si la card ya tiene fondo */
+    background: none;
     padding: 0;
     margin: 0 auto 3rem;
     display: flex;
@@ -315,7 +314,7 @@ header {
     right: -30px;
 }
 
-/* Tarjeta horizontal mejorada */
+/* Tarjeta horizontal */
 .horizontal-card {
     max-width: 1000px;
     width: 100%;
@@ -560,6 +559,24 @@ header {
   display: block;
   transform: translateX(0); 
 }
+
+/*boton*/
+.btn-ver-carrito {
+    background-color: #6f4e37; /* Café oscuro */
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-carrito:hover {
+    background-color: #5a3e2d; /* Más oscuro al pasar el mouse */
+    color: #fff;
+}
+
 
 /*Footer*/
 .footer {
