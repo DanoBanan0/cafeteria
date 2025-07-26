@@ -2,141 +2,410 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <title>Cafeteria</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <!--Encabezado-->
     <header>
-        <div class="header-overlay"></div>
-        <nav class="navbar navbar-expand-lg px-4 pt-3">
-          <div class="container-fluid">
-          <a class="navbar-brand" href="#">Coffee</a>
-          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+        <div class="shadowblack"></div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cafeteria</a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          </ul>
-          <div class="d-flex">
-            <button class="icon-btn" aria-label="User"><i class="bi bi-person-circle"></i></button>
-            <button class="icon-btn position-relative" aria-label="Cart">
-              <i class="bi bi-cart"></i>
-            </button>
-          </div>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#reseñas">Reseñas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="icon-btn" aria-label="User"><i class="bi bi-person-circle"></i></button>
+                        <button class="icon-btn position-relative" aria-label="Cart">
+                            <i class="bi bi-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-content text-white container">
+            <h1 class="text-center">Cafetería Sucrée</h1>
+            <p>Nuestro café está cuidadosamente seleccionado para ofrecerte una experiencia única, con sabores intensos
+                y
+                perfiles equilibrados. Descubre la calidad y el compromiso en cada taza.</p>
         </div>
-      </div>
-    </nav>
+    </header>
 
-    <div class="header-content text-white container">
-      <h1>Savor the Perfect Brew!</h1>
-      <p>From rich and bold to sweet and smooth, our coffee awakens your senses. Discover your perfect blend today.</p>
-      <div>
-        <a href="#" class="btn btn-light text-dark">Learn More</a>
-        <a href="#" class="btn btn-warning text-dark">Order Now</a>
-      </div>
-    </div>
-  </header>
+    <main class="flex-grow-1">
+        <section class="specialty-section">
+            <h2 class="text-center">Nuestras especialidades</h2>
 
-    <main class="container mt-5">
-        <div class="tarjeta row mb-4">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">Expresso</h4>
-                    <h6 class="card-text">Café concentrado, fuerte y con poca cantidad. Base de muchas otras
-                        preparaciones.</h6>
-                    <p>$2.25</p>
-                    <button class="btn btn-outline-primary" onclick="agregarAlCarrito('Expresso', 2.25)">Agregar al carrito</button>
+            <div class="specialty-container">
+                <div class="specialty-item">
+                    <div class="specialty-icon" aria-hidden="true">
+                        <img src="assets/images/taza-de-cafe.svg" alt="Latte" width="48" height="48">
+                    </div>
+                    <div class="specialty-title">Café</div>
+                    <div class="specialty-desc">Especialidad de a casa los multiples sabores de cafe.</div>
+                </div>
+
+                <div class="specialty-item">
+                    <div class="specialty-icon" aria-hidden="true">
+                        <img src="assets/images/pudin.svg" alt="Cappuccino" width="48" height="48">
+                    </div>
+                    <div class="specialty-title">Postres</div>
+                    <div class="specialty-desc">Acompaña tu pastel de la tarde con un rico postre.</div>
+                </div>
+
+                <div class="specialty-item">
+                    <div class="specialty-icon" aria-hidden="true">
+                        <img src="assets/images/bebida-fria.svg" alt="Cold Brew" width="48" height="48">
+                    </div>
+                    <div class="specialty-title">Bebidas frias</div>
+                    <div class="specialty-desc">Ademas de cafes tenemos bebidas frias</div>
+                </div>
+
+                <div class="specialty-item">
+                    <div class="specialty-icon" aria-hidden="true">
+                        <img src="assets/images/desayuno.svg" alt="Mocha" width="48" height="48">
+                    </div>
+                    <div class="specialty-title">Desayunos</div>
+                    <div class="specialty-desc">Comidas para acompañar nuestro delicioso cafe.</div>
                 </div>
             </div>
+        </section>
 
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">Cappuccino</h4>
-                    <h6 class="card-text">Espresso con leche caliente y abundante espuma de leche.</h6>
-                    <p>$3.25</p>
-                    <button class="btn btn-outline-primary" onclick="agregarAlCarrito('Cappuccino', 3.25)">Agregar al carrito</button>
+        <section class="products-section" id="menu" aria-labelledby="special-coffee-heading">
+            <h3 id="special-coffee-heading">Nuestro café especial</h3>
+            <div class="row g-3 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Lungo Coffee - Rs. 199">
+                        <img class="card-img-top" src="assets/images/expresso.png" alt="Expresso" />
+                        <div class="card-body">
+                            <h5 class="card-title">Café Expresso</h5>
+                            <p class="card-text">Café concentrado, fuerte y con poca cantidad. Base de muchas otras
+                                preparaciones.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$2.25</div>
+                                <button class="btn btn-order" aria-label="Order Lungo Coffee"
+                                    onclick="agregarAlCarrito('Expresso', 2.25)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Dalgona Coffee - Rs. 159">
+                        <img class="card-img-top" src="assets/images/cappucinno.png" alt="Cappuccino" />
+                        <div class="card-body">
+                            <h5 class="card-title">Cappuccino</h5>
+                            <p class="card-text">Café instantáneo, azúcar y agua, mezclado hasta cremar.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$3.25</div>
+                                <button class="btn btn-order" aria-label="Order Dalgona Coffee"
+                                    onclick="agregarAlCarrito('Cappuccino', 3.25)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Iced Coffee - Rs. 149">
+                        <img class="card-img-top" src="assets/images/latte.png" alt="Latte" />
+                        <div class="card-body">
+                            <h5 class="card-title">Latte</h5>
+                            <p class="card-text">Café con mucha leche caliente y una capa fina de espuma.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$2.75</div>
+                                <button class="btn btn-order" aria-label="Order Iced Coffee"
+                                    onclick="agregarAlCarrito('Latte', 2.75)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Filter Coffee - Rs. 59">
+                        <img class="card-img-top" src="assets/images/americano.png" alt="Americano" />
+                        <div class="card-body">
+                            <h5 class="card-title">Café americano</h5>
+                            <p class="card-text">Espresso diluido en agua caliente. Suave y mas ligero. </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$1.75</div>
+                                <button class="btn btn-order" aria-label="Order Filter Coffee"
+                                    onclick="agregarAlCarrito('Americano', 1.75)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Filter Coffee - Rs. 59">
+                        <img class="card-img-top" src="assets/images/moccacino.png" alt="Mocaccino" />
+                        <div class="card-body">
+                            <h5 class="card-title">Mocaccino</h5>
+                            <p class="card-text">Café espresso con leche vaporizada, chocolate y un toque de espuma.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$3.75</div>
+                                <button class="btn btn-order" aria-label="Order Filter Coffee"
+                                    onclick="agregarAlCarrito('Mocaccino', 3.75)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">Latte</h4>
-                    <h6 class="card-text">Espresso con mucha leche caliente y una capa fina de espuma.</h6>
-                    <p>$2.75</p>
-                    <button class="btn btn-outline-primary" onclick="agregarAlCarrito('Latte', 2.75)">Agregar al carrito</button>
+        <section class="products-section" aria-labelledby="special-dessert-heading">
+            <h3 id="special-dessert-heading">Nuestra especialidad en postres</h3>
+            <div class="row g-3 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Gulab Jamun - Rs. 199">
+                        <img class="card-img-top" src="assets/images/tiramisu.png" alt="Tiramisu" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">Capas de bizcocho empapado en café, crema de mascarpone y cacao en
+                                polvo.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$2.50</div>
+                                <button class="btn btn-order" aria-label="Order Gulab Jamun"
+                                    onclick="agregarAlCarrito('Tiramisu', 2.50)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Chocolate Tiramisu - Rs. 250">
+                        <img class="card-img-top" src="assets/images/cheesecake.png" alt="Cheesecake" />
+                        <div class="card-body">
+                            <h5 class="card-title">Cheesecake</h5>
+                            <p class="card-text">Base crujiente y relleno cremoso de queso, con topping de frutos rojos
+                                o caramelo.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$3.00</div>
+                                <button class="btn btn-order" aria-label="Order Chocolate Tiramisu"
+                                    onclick="agregarAlCarrito('Cheesecake', 3.00)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Churros - Rs. 170">
+                        <img class="card-img-top" src="assets/images/brownie.png" alt="Brownie" />
+                        <div class="card-body">
+                            <h5 class="card-title">Brownie</h5>
+                            <p class="card-text">Cuadrado denso de chocolate con nueces, servido caliente (opcional con
+                                helado).</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$3.00</div>
+                                <button class="btn btn-order" aria-label="Order Churros"
+                                    onclick="agregarAlCarrito('Brownie', 3.00)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" tabindex="0" aria-label="Australian Lamingtons - Rs. 280">
+                        <img class="card-img-top" src="assets/images/pastelchocolate.png" alt="Pastel de Chocolate" />
+                        <div class="card-body">
+                            <h5 class="card-title">Pastel de Chocolate</h5>
+                            <p class="card-text">Bizcocho esponjoso con relleno y cobertura de ganache, decorado
+                                sencillo.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="price">$3.00</div>
+                                <button class="btn btn-order" aria-label="Order Australian Lamingtons"
+                                    onclick="agregarAlCarrito('Pastel de chocolate', 3.00)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">Americano</h4>
-                    <h6 class="card-text">Espresso al que se le agrega agua caliente; más suave que el espresso.</h6>
-                    <p>$1.75</p>
-                    <button class="btn btn-outline-primary" onclick="agregarAlCarrito('Americano', 1.75)">Agregar al carrito</button>
+        <section class="special-section" aria-label="Best coffee beans promotion">
+            <img src="assets/images/granos.png" alt="Granos de Café" class="beans-left" />
+            <img src="assets/images/granoscafe.png" alt="Granos de Café" class="beans-right" />
+
+            <div class="card horizontal-card mb-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <img src="assets/images/cafeenpolvo.png" class="img-fluid rounded-start"
+                            alt="Bolsa de café especial">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h5 class="card-title">Descubre nuestros mejores granos de café</h5>
+                            <p class="card-text">
+                                Café seleccionado con los más altos estándares de calidad. Ideal para quienes
+                                disfrutan un sabor intenso
+                                y auténtico.
+                            </p>
+                            <button class="btn btn-explore" type="button">Explora nuestros productos</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">Mocaccino</h4>
-                    <h6 class="card-text">Espresso con leche y chocolate, ideal para quienes aman el sabor dulce.</h6>
-                    <p>$3.75</p>
-                    <button class="btn btn-outline-primary" onclick="agregarAlCarrito('Mocaccino', 3.75)">Agregar al carrito </button>
+
+        <!-- Sección de Reseñas -->
+        <section class="reviews-section" id="reseñas" aria-labelledby="happy-customers-heading">
+            <small>Únete a nuestra comunidad</small>
+            <h3 id="happy-customers-heading">Lo que opinan nuestros clientes</h3>
+
+            <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel" tabindex="0"
+                aria-roledescription="carrusel" aria-label="Carrusel de reseñas de clientes">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="review-card">
+                            <div class="review-star" aria-label="5 de 5 estrellas">★★★★★</div>
+                            <p class="review-text">
+                                Un lugar increíble con precios justos. ¡Lo recomiendo totalmente!
+                            </p>
+                            <div class="review-user">
+                                <img src="assets/images/imagen1.png" alt="Foto de perfil de Jane Adams, cliente"
+                                    loading="lazy" />
+                                <div class="review-user-info">
+                                    <strong>Jane Adams</strong>
+                                    <small>Cliente</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="review-card">
+                            <div class="review-star" aria-label="5 de 5 estrellas">★★★★★</div>
+                            <p class="review-text">
+                                Llevo más de diez años pidiendo granos con ustedes. La calidad es siempre excelente.
+                            </p>
+                            <div class="review-user">
+                                <img src="assets/images/imagen2.png" alt="Foto de perfil de Sam Williams, emprendedor"
+                                    loading="lazy" />
+                                <div class="review-user-info">
+                                    <strong>Sam Williams</strong>
+                                    <small>Emprendedor</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="review-card">
+                            <div class="review-star" aria-label="5 de 5 estrellas">★★★★★</div>
+                            <p class="review-text">
+                                El aroma y sabor de sus cafés son únicos. Cada pedido llega puntual y bien empacado.
+                                Es un gusto comprar
+                                aquí.
+                            </p>
+                            <div class="review-user">
+                                <img src="assets/images/imagen3.png" alt="Foto de perfil de Angola Gonzales, gerente"
+                                    loading="lazy" />
+                                <div class="review-user-info">
+                                    <strong>Angola Gonzales</strong>
+                                    <small>Cliente</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
 
-        <button class="btn btn-primary position-fixed bottom-0 end-0 m-4" onclick="mostrarCarritoSidebar()">Ver Carrito 🛒</button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselReviews"
+                    data-bs-slide="prev" aria-label="Reseña anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselReviews"
+                    data-bs-slide="next" aria-label="Siguiente reseña">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="newsletter" id="contacto" aria-label="Formulario de contacto">
+            <div class="newsletter-text">
+                ¡Contáctanos!<br />
+                <small>Envía un mensaje con tus dudas, sugerencias o quejas.</small>
+            </div>
+            <form class="newsletter-form" role="form" onsubmit="return false;">
+                <input type="text" placeholder="Nombre completo" aria-label="Tu nombre" required />
+                <input type="email" placeholder="Correo electrónico" aria-label="Tu correo electrónico" required />
+                <textarea placeholder="Escribe tu mensaje aquí..." aria-label="Tu mensaje" required></textarea>
+                <button type="submit" aria-label="Enviar mensaje">Enviar mensaje</button>
+            </form>
+        </section>
+
+         <button class="btn btn-primary position-fixed bottom-0 end-0 m-4" onclick="mostrarCarritoSidebar()">Ver Carrito
+            🛒</button>
 
         <!--Carrito SideBar-->
         <div id="carritoSidebar" class="side-bar">
-        <button class="btn-close float-end" aria-label="Cerrar" onclick="mostrarCarritoSidebar()"></button>
-           <p>🛒Tu carrito</p>
-           <table class="table table-sm table-striped">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody id="articulos-carrito"></tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2"><strong>Total:</strong></td>
-                    <td id="carrito-total">$0.00</td>
-                </tr>
-            </tfoot>
-           </table>
-           <div class="d-flex justify-content-center mt-3">
+            <button class="btn-close float-end" aria-label="Cerrar" onclick="mostrarCarritoSidebar()"></button>
+            <p>🛒Tu carrito</p>
+            <table class="table table-sm table-striped">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="articulos-carrito"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total:</strong></td>
+                        <td id="carrito-total">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="d-flex justify-content-center mt-3">
                 <button class="btn btn-danger w-50" onclick="finalizarCompra()">Finalizar Compra</button>
-           </div>
-
+            </div>
     </main>
-
-    <footer>
-
+    <footer role="contentinfo" class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <strong>CAFÉ</strong>
+                <small>
+                    <a href="#">Términos de uso</a><br />
+                    <a href="#">Política de privacidad</a>
+                </small>
+            </div>
+            <div class="footer-column">
+                <strong>Servicios</strong>
+                <small><a href="#">Tienda</a></small>
+            </div>
+            <div class="footer-column">
+                <strong>Sobre nosotros</strong>
+                <small><a href="#">Ubicaciones</a></small>
+            </div>
+            <div class="footer-column">
+                <strong>Información</strong>
+                <small><a href="#">Precios y tarifas</a></small>
+            </div>
+            <ul class="social-icons" aria-label="Redes sociales">
+                <li><a href="#" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="#" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+            </ul>
+        </div>
     </footer>
-    <div id="mensaje-general" class="alert alert-primary text-center" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2000; width: 300px;">
 
-   </div>
+    <div id="mensaje-general" class="alert alert-primary text-center" style="display:none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2000; width: 300px;">
     <div id="overlay"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-    
 </body>
+
 </html>
