@@ -3,7 +3,6 @@ let carrito = [];
 let sidebar;
 let overlay;
 
-//Se ejecuta cuando el DOM está listo
 document.addEventListener("DOMContentLoaded", () => {
     sidebar = document.getElementById("carritoSidebar");
     overlay = document.getElementById("overlay");
@@ -20,18 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Cerrar el carrito si se hace clic en el fondo oscuro
     overlay.addEventListener("click", () => {
         sidebar.classList.remove("activa");
         overlay.style.display = "none";
     });
 
-    // funciones accesibles 
     window.mostrarCarritoSidebar = mostrarCarritoSidebar;
     window.finalizarCompra = finalizarCompra;
 });
 
-// Función para actualizar carrito
 function actualizarCarrito() {
     const cuerpoTabla = document.getElementById("articulos-carrito");
     const totalCarrito = document.getElementById("carrito-total");
@@ -54,7 +50,6 @@ function actualizarCarrito() {
     totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// Agregar producto
 function agregarAlCarrito(nombre, precio) {
     const productoExistente = carrito.find(item => item.nombre === nombre);
 
@@ -67,13 +62,11 @@ function agregarAlCarrito(nombre, precio) {
     actualizarCarrito();
 }
 
-// Eliminar producto
 function eliminarDelCarrito(nombre) {
     carrito = carrito.filter(item => item.nombre !== nombre);
     actualizarCarrito();
 }
 
-// Finalizar compra
 function finalizarCompra() {
     sidebar.classList.remove("activa");
     overlay.style.display = "none";
