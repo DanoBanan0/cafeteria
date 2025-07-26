@@ -1,8 +1,12 @@
+// Variables globales
+let carrito = [];
+let sidebar;
+let overlay;
 
-//Funcion para mostrar carrito y agregar overlay completo.
+//Se ejecuta cuando el DOM está listo
 document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.getElementById("carritoSidebar");
-    const overlay = document.getElementById("overlay");
+    sidebar = document.getElementById("carritoSidebar");
+    overlay = document.getElementById("overlay");
 
     function mostrarCarritoSidebar() {
         const carritoVisible = sidebar.classList.contains("activa");
@@ -16,19 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    window.mostrarCarritoSidebar = mostrarCarritoSidebar;
-
-    // Cierra el carrito si se hace clic en el fondo oscuro
+    // Cerrar el carrito si se hace clic en el fondo oscuro
     overlay.addEventListener("click", () => {
         sidebar.classList.remove("activa");
         overlay.style.display = "none";
     });
+
+    // funciones accesibles 
+    window.mostrarCarritoSidebar = mostrarCarritoSidebar;
+    window.finalizarCompra = finalizarCompra;
 });
 
-//Funcion para actualizar carrito.
-
-let carrito = [];
-
+// Función para actualizar carrito
 function actualizarCarrito() {
     const cuerpoTabla = document.getElementById("articulos-carrito");
     const totalCarrito = document.getElementById("carrito-total");
@@ -51,8 +54,7 @@ function actualizarCarrito() {
     totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-//Funcion para agregar elementos al carrito incluyendo el precio y sumar el total.
-
+// Agregar producto
 function agregarAlCarrito(nombre, precio) {
     const productoExistente = carrito.find(item => item.nombre === nombre);
 
@@ -65,31 +67,26 @@ function agregarAlCarrito(nombre, precio) {
     actualizarCarrito();
 }
 
-
-//Funcion para eliminar los elementos del carrito
-
+// Eliminar producto
 function eliminarDelCarrito(nombre) {
     carrito = carrito.filter(item => item.nombre !== nombre);
     actualizarCarrito();
 }
 
-
-//Funcion para funcionalidad del boton finalizar compra y mostrar mensaje de compra procesada.
-
+// Finalizar compra
 function finalizarCompra() {
-  sidebar.classList.remove("activa");
-  overlay.style.display = "none";
+    sidebar.classList.remove("activa");
+    overlay.style.display = "none";
 
-  carrito = [];
-  actualizarCarrito();
+    carrito = [];
+    actualizarCarrito();
 
-  // Mostrar mensaje
-  const mensajeGeneral = document.getElementById("mensaje-general");
-  mensajeGeneral.textContent = "¡Compra procesada con éxito!";
-  mensajeGeneral.style.display = "block";
+    const mensajeGeneral = document.getElementById("mensaje-general");
+    mensajeGeneral.textContent = "¡Compra procesada con éxito!";
+    mensajeGeneral.style.display = "block";
 
-  setTimeout(() =>{
-    mensajeGeneral.style.display = "none";
-    mensajeGeneral.textContent = "";
-  }, 3000);
+    setTimeout(() => {
+        mensajeGeneral.style.display = "none";
+        mensajeGeneral.textContent = "";
+    }, 3000);
 }
