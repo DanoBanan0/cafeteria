@@ -1,24 +1,28 @@
 
 //Funcion para mostrar carrito y agregar overlay completo.
-const sidebar = document.getElementById("carritoSidebar");
-const overlay = document.getElementById("overlay");
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("carritoSidebar");
+    const overlay = document.getElementById("overlay");
 
-function mostrarCarritoSidebar() {
-    const carritoVisible = sidebar.classList.contains("activa");
+    function mostrarCarritoSidebar() {
+        const carritoVisible = sidebar.classList.contains("activa");
 
-    if (carritoVisible) {
+        if (carritoVisible) {
+            sidebar.classList.remove("activa");
+            overlay.style.display = "none";
+        } else {
+            sidebar.classList.add("activa");
+            overlay.style.display = "block";
+        }
+    }
+
+    window.mostrarCarritoSidebar = mostrarCarritoSidebar;
+
+    // Cierra el carrito si se hace clic en el fondo oscuro
+    overlay.addEventListener("click", () => {
         sidebar.classList.remove("activa");
         overlay.style.display = "none";
-    } else {
-        sidebar.classList.add("activa");
-        overlay.style.display = "block";
-    }
-}
-
-// Cierra el carrito si se hace clic en el fondo oscuro
-overlay.addEventListener("click", () => {
-    sidebar.classList.remove("activa");
-    overlay.style.display = "none";
+    });
 });
 
 //Funcion para actualizar carrito.
